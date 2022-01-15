@@ -25,7 +25,7 @@ class Entry {
         }
 
         if ($method == 'POST' && $uri == 'create') {
-            if (!$request['hash'] || !self::validateHash($request['hash'])) {
+            if (!$request['hash'] || !self::validateHash($request['hash']) || strtolower($request['hash']) == 'create') {
                 echo json_encode(['success' => false, 'reason' => 'Wrong hash']);
                 exit();
             }
