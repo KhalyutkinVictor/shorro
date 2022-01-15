@@ -8,5 +8,6 @@ Db Mysql
 Clone repository
 Then run migration
 > cd migration
+
 > php linkTableCreate.php
 ##### Congratulation. All done.
